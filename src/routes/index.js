@@ -8,16 +8,19 @@ export const routes = [
     path: "/",
     page: HomePage,
     isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/service",
     page: ServicePage,
     isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/booking",
     page: BookingPage,
     isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "*",

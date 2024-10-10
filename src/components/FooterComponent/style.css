@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
