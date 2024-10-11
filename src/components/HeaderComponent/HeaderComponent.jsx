@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import logo from "../../assets/images/logo.jpg";
-import banner from "../../assets/images/banner.jpg";
+
 import { useState } from "react";
 import ServicePage from "../../pages/ServicePage/ServicePage";
 import HomeService from "../../pages/HomeService/HomeService";
@@ -56,7 +56,6 @@ const Header = () => {
           <li className="nav-item">Contact</li> */}
         </ul>
       </nav>
-      <img src={banner} alt="Dream Barber banner" className="banner" />
     </header>
   );
 };

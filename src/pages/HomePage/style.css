@@ -1,0 +1,204 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  
+  .banner img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .homepage {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url('../../assets//images/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+  }
+  
+  .intro-section, .service-section, .care-section, .campus-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #E4B996;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 239px;
+    margin-right: 238px;
+    margin-top: 15px;
+  }
+  
+  .intro-text {
+    text-align: center; 
+    font-size: 1.5rem;
+    line-height: 1.6; 
+    font-weight: bold;
+    width: 50%;
+  }
+  
+  .intro-text h2 {
+    color: #992121; 
+    font-size: 2rem; 
+    font-weight: bold
+  }
+
+  .intro-text p {
+    color: #333;
+    font-weight: bold
+  }
+  
+  .intro-image {
+    width: 40%;
+    padding-top: 52px;
+  }
+  
+  .intro-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* .service-section, .care-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .warranty-policy, .menu, .care-tips, .chemical-price-list {
+    width: 48%;
+  }
+  
+  .warranty-policy h3, .menu h3, .care-tips h3, .chemical-price-list h3 {
+    color: #d2691e;
+  }
+  
+  .campus-section h3 {
+    text-align: center;
+    color: #d2691e;
+    margin-bottom: 20px;
+  }
+  
+  .campuses {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .campus {
+    text-align: center;
+    width: 45%;
+  }
+  
+  .campus img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .campus button {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .campus button:hover {
+    background-color: #a0522d;
+  }
+
+
+*/
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 239px;
+  margin-right: 238px;
+
+}
+
+section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.warranty-policy .policy-content,
+.hair-care .hair-care-content {
+  display: flex;
+}
+.warranty-policy {
+  border: 1px solid #992121;
+  background-image: url('../../assets//images/backgroundpolicy.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  /* min-height: 100vh; */
+  height: 600px;
+}
+.warranty-policy h3 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  color: #7B4009
+}
+.warranty-policy img {
+  width: 40%;
+  margin-right: 20px;
+  border-radius: 10px;
+  height: 450px;
+  margin-top: 10px;
+}
+.policy-text-title {
+  font-size: large;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.policy-text-content{
+  padding: 10px;
+  list-style: none;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 19px;
+}
+.policy-text h4,
+.hair-care-content div h4 {
+  color: #d2691e;
+  margin-bottom: 10px;
+}
+
+.menu ul,
+.chemical-service ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li,
+.chemical-service ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hair-care-content div {
+  margin-right: 20px;
+  width: 33%;
+}
+
+.hair-care-content div p {
+  color: #666;
+}
