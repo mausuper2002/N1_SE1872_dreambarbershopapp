@@ -4,6 +4,8 @@ import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import Banner from "../../assets/images/banner.jpg";
 import Introduce from "../../assets/images/introduce.png";
 import Warranty from "../../assets/images/warranty.png";
+import Campus1 from "../../assets/images/campus1.png";
+import Campus2 from "../../assets/images/campus2.png";
 
 const HomePage = () => {
   const handleBookNowClick = (campusName) => {
@@ -17,8 +19,8 @@ const HomePage = () => {
           <img src={Banner} alt="Barbershop Banner" />
         </div>
       </div>
-      <section className="intro-section">
-        <div className="intro-text">
+      <div className="intro-section">
+        <section className="intro-text">
           <h2>INTRODUCING DREAM BARBER</h2>
           <p>
             Welcome to DREAM Barbershop! With 7 years of expertise in BARBER &
@@ -29,11 +31,11 @@ const HomePage = () => {
             the value of BARBER VIET and appreciate the continued support of our
             loyal customers. Swing by DREAM and experience the difference today!
           </p>
-        </div>
-        <div className="intro-image">
+        </section>
+        <section className="intro-image">
           <img src={Introduce} alt="Barber working" />
-        </div>
-      </section>
+        </section>
+      </div>
 
       <div className="content-grid">
         <section className="warranty-policy">
@@ -71,68 +73,141 @@ const HomePage = () => {
         <section className="menu">
           <h3>MENU</h3>
           <div className="menu-content">
-            <h4>Service Price List</h4>
-            <ul>
-              <li>Cut Price: 120K</li>
-              <li>Combo for 2 People: 100K/person</li>
-              <li>Combo for Curl: 300K</li>
+            <h4 className="menu-title">Service Price List</h4>
+            <ul className="content">
+              <li className="menu-title-main" style={{ color: "#992121" }}>
+                CUT PRICE: 120K
+              </li>
+              <li> (CONDITION - CUT - WASH - STYLING) </li>
+              <li>COMBO FOR 2 PEOPLE: 110K/PERSON</li>
+              <li>COMBO FOR 4 PEOPLE: 100K/PERSON</li>
+              <li className="menu-title-main" style={{ color: "#992121" }}>
+                CURL PRICE: 300K
+              </li>
+              <li>COMBO FOR CURL: 410K</li>
+              <li>COMBO FOR CURL FOR 2 PEOPLE: 380K/PERSON</li>
+              <li>COMBO FOR CURL FOR 4 PEOPLE: 340K/PERSON</li>
+              <li className="menu-title-main" style={{ color: "#992121" }}>
+                DYE PRICE LIST
+              </li>
               <li>Basic Color Dye: 300K - 500K</li>
-              <li>Highlight Bleaching: 300K - 400K</li>
-            </ul>
-            <h4>Chemical Service Price List</h4>
-            <ul>
-              <li>Hair Curling: 900K</li>
-              <li>Deep Curling: 500K</li>
-              <li>Regular Dyeing: 300K - 500K</li>
+              <li>BEALCHING: 250K-350K/TIME</li>
+              <li>BOMBO OF COLORING NEEDED TO LIFT THE BASE: 500K</li>
+              <li>HIGHLIGHT BLEACHING THE WHOLE HEAD: 300K-400K</li>
+              <li>HIGHLIGHT BLEACHING: 100K/STREAM</li>
             </ul>
           </div>
         </section>
 
         <section className="hair-care">
-          <h3>HAIR CARE AND PROTECTION AFTER CHEMICAL TREATMENT</h3>
+          <h4 className="menu-title">
+            HAIR CARE AND PROTECTION AFTER CHEMICAL TREATMENT
+          </h4>
           <div className="hair-care-content">
             <div>
-              <h4>After Curling</h4>
-              <p>
-                Do not use high pH shampoos. Blow dry at medium temperature.
-              </p>
+              <h4
+                style={{ fontWeight: 700, fontSize: 15, textAlign: "center" }}
+              >
+                After Curling
+              </h4>
+              <ul>
+                <li>
+                  Do not use shampoos with high pH such as Clear, Xmen,...
+                  (shampoo with mint)
+                </li>
+                <li>Blow dry at medium temperature</li>
+                <li>
+                  Should use additional conditioners such as coconut oil after
+                  shampooing to moisturize hair
+                </li>
+              </ul>
             </div>
             <div>
-              <h4>After Dyeing</h4>
-              <p>Do not use high pH shampoos. Use additional conditioner.</p>
+              <h4
+                style={{ fontWeight: 700, fontSize: 15, textAlign: "center" }}
+              >
+                After Dyeing
+              </h4>
+              <ul>
+                <li>
+                  Do not use shampoos with high pH such as Clear, Xmen,...
+                  (shampoos with mint).
+                </li>
+                <li>
+                  Should use additional coconut oil after shampooing to
+                  moisturize hair
+                </li>
+              </ul>
             </div>
             <div>
-              <h4>After Bleaching</h4>
-              <p>Use purple shampoo to maintain color and prevent dryness.</p>
+              <h4
+                style={{ fontWeight: 700, fontSize: 15, textAlign: "center" }}
+              >
+                After Bleaching
+              </h4>
+              <ul>
+                <li>
+                  Do not use shampoos with high pH such as Clear, Xmen,...
+                  (shampoo with mint)
+                </li>
+                <li>
+                  Use purple shampoo to massage the head and use conditioner to
+                  keep the color longer and prevent dryness.
+                </li>
+                <li>Use medium temperature</li>
+                <li>
+                  Should use additional coconut oil after shampooing to
+                  moisturize the hair
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="chemical-service">
-          <h3>Chemical Service Price List</h3>
-          <ul>
-            <li>Perm Curling: 900K</li>
-            <li>Chidori Curling: 700K</li>
-            <li>Regular Dyeing: 300K - 500K</li>
-            <li>High-End Dyeing: 500K - 700K</li>
+          <h4 className="menu-title">CHEMICAL SERVICE PRICE LIST</h4>
+          <ul className="content">
+            <li className="menu-title-main" style={{ color: "#992121" }}>
+              HAIR CURLING
+            </li>
+            <li>PREMCLOCK: 900K</li>
+            <li>DEEP CURLING: 500K</li>
+            <li>RUFLED CURLING: 700K</li>
+            <li>CHIDORI CURLING: 700K</li>
+            <li>ZIZAC CURLING: 500K</li>
+            <li>MEDUSA CURLING: 500K</li>
+            <li>CURLY CURLING: 500K</li>
+            <li>SIDE STRAIGHTENING: 200K</li>
+            <li className="menu-title-main" style={{ color: "#992121" }}>
+              HAIR DYEING
+            </li>
+            <li>REGULAR DYEING: 300K-500K</li>
+            <li>HAIR BLEACHING: 250K-350K</li>
+            <li>COLOR DYEING NEEDING BASE LIFTING: 500K</li>
+            <li>HIGH-END DYEING: 500K-700K</li>
           </ul>
         </section>
       </div>
-
+      <h3>CAMPUS</h3>
       <section className="campus-section">
-        <h3>CAMPUS</h3>
-        <div className="campuses">
-          <div className="campus">
-            <img src="path/to/campus1.jpg" alt="Campus 1" />
-            <p>Campus 1: Phan Van Tri Street - Go Vap District</p>
+        <div className="campus">
+          <img src={Campus1} alt="Campus 1" />
+          <p style={{ fontWeight: 700, fontSize: 15, textAlign: "center" }}>
+            Campus 1: Phan Van Tri Street - Go Vap District
+          </p>
+          <div style={{ textAlign: "center" }}>
             <ButtonComponent
               text="BOOK NOW"
               onClick={() => handleBookNowClick("Campus 1")}
             />
           </div>
-          <div className="campus">
-            <img src="path/to/campus2.jpg" alt="Campus 2" />
-            <p>Campus 2: Le Van Viet Street - 9th District</p>
+        </div>
+        <div className="campus">
+          <img src={Campus2} alt="Campus 2" />
+          <p style={{ fontWeight: 700, fontSize: 15, textAlign: "center" }}>
+            Campus 2: Le Van Viet Street - 9th District
+          </p>
+          <div style={{ textAlign: "center" }}>
             <ButtonComponent
               text="BOOK NOW"
               onClick={() => handleBookNowClick("Campus 2")}
