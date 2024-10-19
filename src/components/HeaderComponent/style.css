@@ -21,6 +21,7 @@
     cursor: pointer;
     border-radius: 20px;
     padding: 6px;
+    text-decoration: none;
 }
 
 .logo {

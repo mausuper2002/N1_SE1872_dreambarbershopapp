@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
+import "./HomePage.css";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
-import Banner from "../../assets/images/banner.jpg";
+import BannerComponent from "../../components/BannerComponent/BannerComponent";
 import Introduce from "../../assets/images/introduce.png";
 import Warranty from "../../assets/images/warranty.png";
 import Campus1 from "../../assets/images/campus1.png";
@@ -14,11 +14,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <div class="banner-container">
-        <div class="banner">
-          <img src={Banner} alt="Barbershop Banner" />
-        </div>
-      </div>
+      <BannerComponent />
       <div className="intro-section">
         <section className="intro-text">
           <h2>INTRODUCING DREAM BARBER</h2>

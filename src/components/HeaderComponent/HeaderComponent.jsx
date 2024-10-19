@@ -1,59 +1,55 @@
 import React from "react";
 import "./style.css";
 import logo from "../../assets/images/logo.jpg";
-
 import { useState } from "react";
-import ServicePage from "../../pages/ServicePage/ServicePage";
-import HomeService from "../../pages/HomeService/HomeService";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [menus, setMenu] = useState([
     {
       page: "Home Service",
-      path: HomeService,
+      path: "/homeservice",
     },
     {
       page: "Service",
-      path: ServicePage,
+      path: "/service",
     },
     {
       page: "Before Barbering",
-      path: "*",
+      path: "/bespoke",
     },
     {
       page: "Before Coloring",
-      path: "*",
+      path: "/becolor",
     },
     {
       page: "Team",
-      path: "*",
+      path: "/teampage",
     },
     {
       page: "Contact",
-      path: "*",
+      path: "/contact",
     },
   ]);
   return (
     <header className="header">
       <div className="top-bar">
-        <button className="booking-btn">Booking</button>
-        <img src={logo} alt="Dream Barber Logo" className="logo" />
-        <button className="sign-in-btn">Sign In</button>
+        <Link to="/booking" className="booking-btn">
+          Booking
+        </Link>
+        <Link to="/">
+          <img src={logo} alt="Dream Barber Logo" className="logo" />
+        </Link>
+        <Link to="/signin" className="sign-in-btn">
+          Sign In
+        </Link>
       </div>
       <nav className="nav-bar">
         <ul className="nav-list">
           {menus?.map((menu, menuKey) => (
             <li className="nav-item" key={menuKey}>
-              <Link to={menu?.path}>{menu?.page}</Link>
-              {/* Home Service */}
+              <Link to={menu.path}>{menu?.page}</Link>
             </li>
           ))}
-
-          {/* <li className="nav-item">Service</li>
-          <li className="nav-item">Before Barbering</li>
-          <li className="nav-item">Before Coloring</li>
-          <li className="nav-item">Team</li>
-          <li className="nav-item">Contact</li> */}
         </ul>
       </nav>
     </header>
