@@ -6,6 +6,7 @@ import Introduce from "../../assets/images/introduce.png";
 import Warranty from "../../assets/images/warranty.png";
 import Campus1 from "../../assets/images/campus1.png";
 import Campus2 from "../../assets/images/campus2.png";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const handleBookNowClick = (campusName) => {
@@ -192,10 +193,12 @@ const HomePage = () => {
             Campus 1: Phan Van Tri Street - Go Vap District
           </p>
           <div style={{ textAlign: "center" }}>
-            <ButtonComponent
-              text="BOOK NOW"
-              onClick={() => handleBookNowClick("Campus 1")}
-            />
+            <Link to={"/booking"}>
+              <ButtonComponent
+                text="BOOK NOW"
+                // onClick={() => handleBookNowClick("Campus 1")}
+              />
+            </Link>
           </div>
         </div>
         <div className="campus">
@@ -204,10 +207,12 @@ const HomePage = () => {
             Campus 2: Le Van Viet Street - 9th District
           </p>
           <div style={{ textAlign: "center" }}>
-            <ButtonComponent
-              text="BOOK NOW"
-              onClick={() => handleBookNowClick("Campus 2")}
-            />
+            <Link to={"/booking"}>
+              <ButtonComponent
+                text="BOOK NOW"
+                // onClick={() => handleBookNowClick("Campus 2")}
+              />
+            </Link>
           </div>
         </div>
       </section>

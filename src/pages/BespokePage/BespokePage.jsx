@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Header from "../../components/HeaderComponent/HeaderComponent";
 import BannerComponent from "../../components/BannerComponent/BannerComponent";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import "./Bespoke.css";
-import Footer from "../../components/FooterComponent/FooterComponent";
 import ThinHair from "../../assets/images/tocmong.webp";
 import MediumHair from "../../assets/images/tocvua.webp";
 import ThickHair from "../../assets/images/tocday.webp";
@@ -46,8 +44,8 @@ import SidePartBleach from "../../assets/images/sidepartbleach.webp";
 import MiddlePart2 from "../../assets/images/middlepart2.webp";
 import SidePartWavy from "../../assets/images/sidepartwavy.webp";
 import MessyCrop from "../../assets/images/messycrop.webp";
-import { Link } from "react-scroll";
-
+import { Link as LinkRoll } from "react-scroll";
+import { Link } from "react-router-dom";
 function BarberCard({ image, title, barber }) {
   return (
     <div className="barber-card">
@@ -58,7 +56,9 @@ function BarberCard({ image, title, barber }) {
         <h3>{title}</h3>
         <p>{barber}</p>
         <div style={{ marginTop: "10px" }}>
-          <ButtonComponent text="Book now" />
+          <Link to={"/booking"}>
+            <ButtonComponent text="Book now" />
+          </Link>
         </div>
       </div>
     </div>
@@ -74,7 +74,6 @@ const BespokePage = () => {
   return (
     <>
       <div className="bespokepage">
-        <Header />
         <BannerComponent />
         <section className="section-bespoke">
           <section className="section-bespoke-intro">
@@ -83,10 +82,14 @@ const BespokePage = () => {
               <h2>Identify the important factors in choosing a hairstyle</h2>
               <div className="button">
                 <div className="left-button">
-                  <ButtonComponent text="Test Style" />
+                  <Link to={"/bespoke"}>
+                    <ButtonComponent text="Test Style" />
+                  </Link>
                 </div>
                 <div className="right-button">
-                  <ButtonComponent text="Test Color" />
+                  <Link to={"/becolor"}>
+                    <ButtonComponent text="Test Color" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -97,14 +100,14 @@ const BespokePage = () => {
                   suitable hairstyle will help to balance out the face shape and
                   improve some of the facial flaws.
                 </li>
-                <li>
+                <li style={{ marginTop: 10 }}>
                   Another factor to consider is hair density. Although there are
                   some beautiful hairstyles that you love, not all of them are
                   suitable, because each hairstyle requires different hair
                   densities, as well as hard, soft, curly, bouncy or frizzy
                   hair.
                 </li>
-                <li>
+                <li style={{ marginTop: 10 }}>
                   You can take the following test to find out which hairstyle
                   suits your face. Or go to Dream barbershop for more accurate
                   advice from skilled barbers with the "Bespoke Barbering"
@@ -148,7 +151,7 @@ const BespokePage = () => {
                 className={`option ${selected === "thin" ? "selected" : ""}`}
                 onClick={() => handleSelection("thin")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "thin" ? "active" : ""}`}
                   activeClass="active"
                   to="fashion"
@@ -156,14 +159,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Thin hair
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "medium" ? "selected" : ""}`}
                 onClick={() => handleSelection("medium")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "medium" ? "active" : ""
                   }`}
@@ -173,14 +176,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Medium hair
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "thick" ? "selected" : ""}`}
                 onClick={() => handleSelection("thick")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "thick" ? "active" : ""}`}
                   activeClass="active"
                   to="fashion"
@@ -188,7 +191,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Thick hair
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -234,7 +237,7 @@ const BespokePage = () => {
                 className={`option ${selected === "formal" ? "selected" : ""}`}
                 onClick={() => handleSelection("formal")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "formal" ? "active" : ""
                   }`}
@@ -244,7 +247,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Formal
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -253,7 +256,7 @@ const BespokePage = () => {
                 }`}
                 onClick={() => handleSelection("comfortable")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "comfortable" ? "active" : ""
                   }`}
@@ -263,14 +266,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Comfortable
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "sport" ? "selected" : ""}`}
                 onClick={() => handleSelection("sport")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "sport" ? "active" : ""}`}
                   activeClass="active"
                   to="freguency"
@@ -278,7 +281,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Sport
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -325,7 +328,7 @@ const BespokePage = () => {
                 onClick={() => handleSelection("daily")}
                 style={{ paddingLeft: 60 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "daily" ? "active" : ""}`}
                   activeClass="active"
                   to="hairshape"
@@ -333,7 +336,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Daily
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -343,7 +346,7 @@ const BespokePage = () => {
                 onClick={() => handleSelection("twotimes")}
                 style={{ paddingLeft: 70 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "twotimes" ? "active" : ""
                   }`}
@@ -353,7 +356,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   2-3 times/week
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -363,7 +366,7 @@ const BespokePage = () => {
                 onClick={() => handleSelection("occasion")}
                 style={{ paddingLeft: 30 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "occasion" ? "active" : ""
                   }`}
@@ -373,7 +376,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   On occasion
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -427,7 +430,7 @@ const BespokePage = () => {
                 onClick={() => handleSelection("straight")}
                 style={{ paddingRight: 50 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "straight" ? "active" : ""
                   }`}
@@ -437,7 +440,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Straight Hair
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -445,7 +448,7 @@ const BespokePage = () => {
                 onClick={() => handleSelection("wavy")}
                 style={{ paddingRight: 50 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "wavy" ? "active" : ""}`}
                   activeClass="active"
                   to="faceshape"
@@ -453,7 +456,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Wavy Hair
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -461,7 +464,7 @@ const BespokePage = () => {
                 onClick={() => handleSelection("curly")}
                 style={{ paddingRight: 30 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "curly" ? "active" : ""}`}
                   activeClass="active"
                   to="faceshape"
@@ -469,7 +472,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Curly Hair
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -513,7 +516,7 @@ const BespokePage = () => {
                 className={`option ${selected === "round" ? "selected" : ""}`}
                 onClick={() => handleSelection("round")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "round" ? "active" : ""}`}
                   activeClass="active"
                   to="roundface"
@@ -521,14 +524,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Round face
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "diamond" ? "selected" : ""}`}
                 onClick={() => handleSelection("diamond")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "diamond" ? "active" : ""
                   }`}
@@ -538,14 +541,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Diamond Face
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "long" ? "selected" : ""}`}
                 onClick={() => handleSelection("long")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "long" ? "active" : ""}`}
                   activeClass="active"
                   to="longface"
@@ -553,7 +556,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Long face
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -581,7 +584,7 @@ const BespokePage = () => {
                 className={`option ${selected === "square" ? "selected" : ""}`}
                 onClick={() => handleSelection("square")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "square" ? "active" : ""
                   }`}
@@ -591,14 +594,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Square face
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "oval" ? "selected" : ""}`}
                 onClick={() => handleSelection("oval")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "oval" ? "active" : ""}`}
                   activeClass="active"
                   to="ovalface"
@@ -606,14 +609,14 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Oval face
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "triagle" ? "selected" : ""}`}
                 onClick={() => handleSelection("triagle")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "triagle" ? "active" : ""
                   }`}
@@ -623,7 +626,7 @@ const BespokePage = () => {
                   smooth={true}
                 >
                   Triangle face
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -943,7 +946,6 @@ const BespokePage = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

@@ -35,25 +35,37 @@ export const routes = [
   {
     path: "/bespoke",
     page: BespokePage,
+    isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/becolor",
     page: BecolorPage,
+    isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/homeservice",
     page: HomeService,
+    isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/teampage",
     page: TeamPage,
+    isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/contact",
     page: Contact,
+    isShowHeader: true,
+    isShowFooter: true,
   },
   {
     path: "/signin",
     page: SignIn,
+    isShowHeader: true,
+    isShowFooter: true,
   },
 ];

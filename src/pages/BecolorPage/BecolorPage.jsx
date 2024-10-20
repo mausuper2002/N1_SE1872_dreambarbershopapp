@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Header from "../../components/HeaderComponent/HeaderComponent";
 import BannerComponent from "../../components/BannerComponent/BannerComponent";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
-import { Link } from "react-scroll";
+import { Link as LinkRoll } from "react-scroll";
 import HealthyHair from "../../assets/images/healthyhair.webp";
 import DryHair from "../../assets/images/dryhair.webp";
 import DamagedHair from "../../assets/images/damagedhair.webp";
@@ -40,7 +39,6 @@ import Color21 from "../../assets/images/mau21.webp";
 import Color22 from "../../assets/images/mau22.webp";
 import Color23 from "../../assets/images/mau23.webp";
 import Color24 from "../../assets/images/mau24.webp";
-import Footer from "../../components/FooterComponent/FooterComponent";
 import DongHo from "../../assets/images/dongho.png";
 import Lich from "../../assets/images/lich.png";
 import HoaChat from "../../assets/images/hoachat.png";
@@ -48,6 +46,7 @@ import VoiSen from "../../assets/images/voisen.png";
 import GoiDau from "../../assets/images/goidau.png";
 import MaySay from "../../assets/images/maysay.png";
 import CanhCao from "../../assets/images/maysay.png";
+import { Link } from "react-router-dom";
 const BecolorPage = () => {
   const [selected, setSelected] = useState(null);
 
@@ -57,7 +56,6 @@ const BecolorPage = () => {
   return (
     <>
       <div>
-        <Header />
         <BannerComponent />
         <section className="section-bespoke">
           <section className="section-bespoke-intro">
@@ -66,11 +64,15 @@ const BecolorPage = () => {
               <h2>Test to help you find the right hair color!</h2>
               <div className="button">
                 <div className="left-button">
-                  <ButtonComponent text="Test Style" />
+                  <Link to={"/bespoke"}>
+                    <ButtonComponent text="Test Style" />
+                  </Link>
                 </div>
 
                 <div className="right-button">
-                  <ButtonComponent text="Test Color" />
+                  <Link to={"/becolor"}>
+                    <ButtonComponent text="Test Color" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -128,7 +130,7 @@ const BecolorPage = () => {
                 className={`option ${selected === "thin" ? "selected" : ""}`}
                 onClick={() => handleSelection("thin")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "thin" ? "active" : ""}`}
                   activeClass="active"
                   to="sensitive"
@@ -136,14 +138,14 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Healthy hair
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "medium" ? "selected" : ""}`}
                 onClick={() => handleSelection("medium")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "medium" ? "active" : ""
                   }`}
@@ -153,14 +155,14 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Dry hair
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "thick" ? "selected" : ""}`}
                 onClick={() => handleSelection("thick")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "thick" ? "active" : ""}`}
                   activeClass="active"
                   to="warning-text"
@@ -168,7 +170,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Damaged hair
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -214,7 +216,7 @@ const BecolorPage = () => {
                 className={`option ${selected === "thin" ? "selected" : ""}`}
                 onClick={() => handleSelection("thin")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "thin" ? "active" : ""}`}
                   activeClass="active"
                   to="frequency"
@@ -222,14 +224,14 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Not sensitive
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "medium" ? "selected" : ""}`}
                 onClick={() => handleSelection("medium")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "medium" ? "active" : ""
                   }`}
@@ -239,14 +241,14 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Somewhat sensitive
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
                 className={`option ${selected === "thick" ? "selected" : ""}`}
                 onClick={() => handleSelection("thick")}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "thick" ? "active" : ""}`}
                   activeClass="active"
                   to="warning-text"
@@ -254,7 +256,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Very sensitive
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -304,7 +306,7 @@ const BecolorPage = () => {
                 onClick={() => handleSelection("daily")}
                 style={{ paddingLeft: 60 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "daily" ? "active" : ""}`}
                   activeClass="active"
                   to="skintone"
@@ -312,7 +314,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Daily
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -322,7 +324,7 @@ const BecolorPage = () => {
                 onClick={() => handleSelection("twotimes")}
                 style={{ paddingLeft: 70 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "twotimes" ? "active" : ""
                   }`}
@@ -332,7 +334,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   2-3 times/week
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -342,7 +344,7 @@ const BecolorPage = () => {
                 onClick={() => handleSelection("occasion")}
                 style={{ paddingLeft: 30 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "occasion" ? "active" : ""
                   }`}
@@ -352,7 +354,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   On occasion
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -404,7 +406,7 @@ const BecolorPage = () => {
                 onClick={() => handleSelection("daily")}
                 style={{ paddingLeft: 60, marginRight: 0 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${selected === "daily" ? "active" : ""}`}
                   activeClass="active"
                   to="warmtone"
@@ -412,7 +414,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Warm tone
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -422,7 +424,7 @@ const BecolorPage = () => {
                 onClick={() => handleSelection("twotimes")}
                 style={{ paddingLeft: 70, marginRight: 50 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "twotimes" ? "active" : ""
                   }`}
@@ -432,7 +434,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Neutral tone
-                </Link>
+                </LinkRoll>
               </div>
 
               <div
@@ -442,7 +444,7 @@ const BecolorPage = () => {
                 onClick={() => handleSelection("occasion")}
                 style={{ paddingLeft: 30, marginRight: 50 }}
               >
-                <Link
+                <LinkRoll
                   className={`hair-btn ${
                     selected === "occasion" ? "active" : ""
                   }`}
@@ -452,7 +454,7 @@ const BecolorPage = () => {
                   smooth={true}
                 >
                   Cool tone
-                </Link>
+                </LinkRoll>
               </div>
             </section>
             <section>
@@ -506,7 +508,11 @@ const BecolorPage = () => {
                   Easy to care for, no bleaching required, safe for the scalp,
                   less harmful to hair
                 </p>
-                <button className="book-now-button">600.000 - Book now</button>
+                <Link to={"/booking"}>
+                  <button className="book-now-button">
+                    600.000 - Book now
+                  </button>
+                </Link>
               </div>
               <div className="color-swatches">
                 <img src={Color1} alt="safe color 1" />
@@ -524,9 +530,12 @@ const BecolorPage = () => {
                   You may need to bleach your hair to get the desired color.
                   ​Notes after dyeing to keep hair shiny and healthy
                 </p>
-                <button className="book-now-button">
-                  1.200.000 - Book now
-                </button>
+                <Link to={"/booking"}>
+                  {" "}
+                  <button className="book-now-button">
+                    1.200.000 - Book now
+                  </button>
+                </Link>
               </div>
               <div className="color-swatches">
                 <img src={Color5} alt="stylish color 1" />
@@ -536,7 +545,7 @@ const BecolorPage = () => {
               </div>
             </div>
 
-            <Link
+            <LinkRoll
               className="note-button"
               activeClass="active"
               to="tipsaftercolor"
@@ -544,7 +553,7 @@ const BecolorPage = () => {
               smooth={true}
             >
               ​Hair Care Tips After Dyeing
-            </Link>
+            </LinkRoll>
           </div>
 
           <section className="faceshape" style={{ marginTop: 30 }}>
@@ -582,7 +591,11 @@ const BecolorPage = () => {
                   Easy to care for, no bleaching required, safe for the scalp,
                   less harmful to hair
                 </p>
-                <button className="book-now-button">600.000 - Book now</button>
+                <Link to={"/booking"}>
+                  <button className="book-now-button">
+                    600.000 - Book now
+                  </button>
+                </Link>
               </div>
               <div className="color-swatches">
                 <img src={Color9} alt="safe color 1" />
@@ -600,9 +613,11 @@ const BecolorPage = () => {
                   You may need to bleach your hair to get the desired color.
                   ​Notes after dyeing to keep hair shiny and healthy
                 </p>
-                <button className="book-now-button">
-                  1.200.000 - Book now
-                </button>
+                <Link to={"/booking"}>
+                  <button className="book-now-button">
+                    1.200.000 - Book now
+                  </button>
+                </Link>
               </div>
               <div className="color-swatches">
                 <img src={Color13} alt="stylish color 1" />
@@ -612,7 +627,7 @@ const BecolorPage = () => {
               </div>
             </div>
 
-            <Link
+            <LinkRoll
               className="note-button"
               activeClass="active"
               to="tipsaftercolor"
@@ -620,7 +635,7 @@ const BecolorPage = () => {
               smooth={true}
             >
               ​Hair Care Tips After Dyeing
-            </Link>
+            </LinkRoll>
           </div>
 
           <section className="faceshape" style={{ marginTop: 30 }}>
@@ -656,7 +671,11 @@ const BecolorPage = () => {
                   Easy to care for, no bleaching required, safe for the scalp,
                   less harmful to hair
                 </p>
-                <button className="book-now-button">600.000 - Book now</button>
+                <Link to={"/booking"}>
+                  <button className="book-now-button">
+                    600.000 - Book now
+                  </button>
+                </Link>
               </div>
               <div className="color-swatches">
                 <img src={Color17} alt="safe color 1" />
@@ -673,9 +692,11 @@ const BecolorPage = () => {
                   You may need to bleach your hair to get the desired color.
                   ​Notes after dyeing to keep hair shiny and healthy
                 </p>
-                <button className="book-now-button">
-                  1.200.000 - Book now
-                </button>
+                <Link to={"/booking"}>
+                  <button className="book-now-button">
+                    1.200.000 - Book now
+                  </button>
+                </Link>
               </div>
               <div className="color-swatches">
                 <img src={Color21} alt="stylish color 1" />
@@ -685,7 +706,7 @@ const BecolorPage = () => {
               </div>
             </div>
 
-            <Link
+            <LinkRoll
               className="note-button"
               activeClass="active"
               to="tipsaftercolor"
@@ -693,7 +714,7 @@ const BecolorPage = () => {
               smooth={true}
             >
               ​Hair Care Tips After Dyeing
-            </Link>
+            </LinkRoll>
           </div>
 
           <section
@@ -736,7 +757,7 @@ const BecolorPage = () => {
               className="warning-button"
               style={{ marginTop: 20, textAlign: "center" }}
             >
-              <Link
+              <LinkRoll
                 className="note-button"
                 activeClass="active"
                 to="tipsaftercolor"
@@ -744,7 +765,7 @@ const BecolorPage = () => {
                 smooth={true}
               >
                 ​Hair Care Tips After Dyeing
-              </Link>
+              </LinkRoll>
             </div>
           </section>
           <div id="tipsaftercolor" className="hair-care-container">
@@ -799,11 +820,11 @@ const BecolorPage = () => {
                 </p>
               </div>
             </div>
-
-            <ButtonComponent text="Book now" />
+            <Link to={"/booking"}>
+              <ButtonComponent text="Book now" />
+            </Link>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

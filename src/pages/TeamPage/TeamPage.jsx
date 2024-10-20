@@ -1,7 +1,7 @@
 import React from "react";
 
 const TeamPage = () => {
-  return <div>TeamPage</div>;
+  return <></>;
 };
 
 export default TeamPage;
