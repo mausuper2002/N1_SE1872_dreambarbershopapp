@@ -1,0 +1,18 @@
+.stylist-container {
+    display: flex;
+}
+
+.pro-sidebar {
+    height: 100% !important;
+}
+.stylist-content {
+    width: 100%;
+}
+.stylist-header {
+    height: 40px;
+    border: 1px solid green;
+}
+
+.stylist-main {
+    border: 1px solid red
+}

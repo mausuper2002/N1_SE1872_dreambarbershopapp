@@ -1,4 +1,4 @@
-import Admin from "../pages/admin/Admin";
+import Stylist from "../pages/stylist/Stylist";
 import BecolorPage from "../pages/BecolorPage/BecolorPage";
 import BespokePage from "../pages/BespokePage/BespokePage";
 import BookingPage from "../pages/BookingPage/BookingPage";
@@ -9,6 +9,7 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import ServicePage from "../pages/ServicePage/ServicePage";
 import SignIn from "../pages/SignInPage/SignIn";
 import TeamPage from "../pages/TeamPage/TeamPage";
+import ProfileStylist from "../pages/stylist/content/Profile/Profile";
 
 export const routes = [
   {
@@ -70,7 +71,12 @@ export const routes = [
     isShowFooter: true,
   },
   {
-    path: "/admin",
-    page: Admin,
+    path: "/stylist",
+    page: Stylist,
+    isPrivate: true,
+  },
+  {
+    path: "/profile-stylist",
+    page: ProfileStylist,
   },
 ];

@@ -47,6 +47,7 @@ import GoiDau from "../../assets/images/goidau.png";
 import MaySay from "../../assets/images/maysay.png";
 import CanhCao from "../../assets/images/maysay.png";
 import { Link } from "react-router-dom";
+
 const BecolorPage = () => {
   const [selected, setSelected] = useState(null);
 

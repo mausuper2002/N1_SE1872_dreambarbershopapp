@@ -9,10 +9,6 @@ import Campus2 from "../../assets/images/campus2.png";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const handleBookNowClick = (campusName) => {
-    alert(`Booking for ${campusName}`);
-  };
-
   return (
     <div className="homepage">
       <BannerComponent />

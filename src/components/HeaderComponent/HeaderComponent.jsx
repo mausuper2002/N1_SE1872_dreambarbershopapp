@@ -31,7 +31,7 @@ const Header = () => {
     },
   ]);
   return (
-    <header className="header">
+    <div className="header">
       <div className="top-bar">
         <Link to="/booking" className="booking-btn">
           Booking
@@ -52,7 +52,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 
