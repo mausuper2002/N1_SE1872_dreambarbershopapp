@@ -1,0 +1,80 @@
+.teampage {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url('../../assets/images/backgroundteampage.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+}
+
+/* General styling */
+.barber-shop-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #E3B896;
+    margin: 25px 200px;
+  }
+  
+  /* Info section */
+  .info-section {
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+    background-color: #f5e3d3;
+    border-right: 1px solid #ccc;
+  }
+  
+  .info-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .info-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .booking-button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Barber grid section */
+  .barber-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 65%;
+    padding: 20px;
+  }
+  
+  .barber-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .barber-img {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
+  .barber-card p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  

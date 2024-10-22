@@ -1,3 +1,4 @@
+import Admin from "../pages/admin/Admin";
 import BecolorPage from "../pages/BecolorPage/BecolorPage";
 import BespokePage from "../pages/BespokePage/BespokePage";
 import BookingPage from "../pages/BookingPage/BookingPage";
@@ -67,5 +68,9 @@ export const routes = [
     page: SignIn,
     isShowHeader: true,
     isShowFooter: true,
+  },
+  {
+    path: "/admin",
+    page: Admin,
   },
 ];

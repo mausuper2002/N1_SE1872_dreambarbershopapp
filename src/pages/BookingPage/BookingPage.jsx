@@ -148,7 +148,7 @@ const BookingPage = () => {
             </div>
           </form>
         </div>
-        <div>.</div>
+        <div style={{ height: 30 }}>.</div>
       </div>
     </>
   );
